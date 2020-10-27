@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/main.c</file>
+            <file>file:/home/abiel/microchip/harmony/v2_06/framework/peripheral/usart/templates/usart_ReceiverDataAvailable_Default.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/MAVLink/MAVLinkSender.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/mavlink_recv_task.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/usart/src/drv_usart_static_byte_model.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/libs/MAVLinkV2/mavlink_helpers.h</file>
+            <file>file:/opt/microchip/mplabx/v5.40/packs/Microchip/PIC32MZ-EC_DFP/1.2.40/xc32/startup/crt0.S</file>
+            <file>file:/home/abiel/microchip/harmony/v2_06/third_party/rtos/FreeRTOS/Source/tasks.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/HAL/PIC_HV2/comms.c</file>
+            <file>file:/home/abiel/microchip/harmony/v2_06/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/port_asm.S</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/system_tasks.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/MAVLink/MAVLinkRecvTask.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/MAVStatusTask.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/usart/drv_usart_static.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/rtos_hooks.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/MAVLink/MAVLinkHandler.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/HAL/comms.h</file>
+            <file>file:/opt/microchip/xc32/v2.41/pic32mx/include/string.h</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/default/debug/MicroDron-PIC32-HV2.X.debug.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>2098304</length>                 
+      <used>45116</used>                     
+      <free>2053188</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>524928</length>                 
+      <used>415088</used>                     
+      <free>109840</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
