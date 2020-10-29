@@ -144,18 +144,7 @@ void APP_Tasks ( void )
         {
             bool appInitialized = true;
        
-            DRV_OC0_Enable();
-            DRV_OC1_Enable();
-            DRV_OC2_Enable();
-            DRV_OC3_Enable();
-            
-            DRV_OC0_Start();
-            DRV_OC1_Start();
-            DRV_OC2_Start();
-            DRV_OC3_Start();
-
-            DRV_TMR0_Start();
-            i = 0;
+            ;
         
             if (appInitialized)
             {
@@ -167,14 +156,7 @@ void APP_Tasks ( void )
 
         case APP_STATE_SERVICE_TASKS:
         {
-            DRV_OC0_PulseWidthSet(i);
-            DRV_OC1_PulseWidthSet(i);
-            DRV_OC2_PulseWidthSet(i);
-            DRV_OC3_PulseWidthSet(i);
-            
-            i += 0xFF;
-            if(i > 0xFFFF) i = 0;
-            break;
+            ;
         }
 
         /* TODO: implement your application state machine.*/

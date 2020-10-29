@@ -59,6 +59,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "mavlink_send_task.h"
 #include "mavlink_status_task.h"
 #include "att_controller_task.h"
+#include "serialhandler.h"
+#include "imu_update_task.h"
 
 
 // *****************************************************************************
@@ -77,6 +79,8 @@ static void _MAVLINK_RECV_TASK_Tasks(void);
 static void _MAVLINK_SEND_TASK_Tasks(void);
 static void _MAVLINK_STATUS_TASK_Tasks(void);
 static void _ATT_CONTROLLER_TASK_Tasks(void);
+static void _SERIALHANDLER_Tasks(void);
+static void _IMU_UPDATE_TASK_Tasks(void);
 
 
 // *****************************************************************************
@@ -127,6 +131,16 @@ void SYS_Tasks ( void )
                 "ATT_CONTROLLER_TASK Tasks",
                 8192, NULL, 7, NULL);
 
+    /* Create OS Thread for SERIALHANDLER Tasks. */
+    xTaskCreate((TaskFunction_t) _SERIALHANDLER_Tasks,
+                "SERIALHANDLER Tasks",
+                1024, NULL, 5, NULL);
+
+    /* Create OS Thread for IMU_UPDATE_TASK Tasks. */
+    xTaskCreate((TaskFunction_t) _IMU_UPDATE_TASK_Tasks,
+                "IMU_UPDATE_TASK Tasks",
+                1024, NULL, 5, NULL);
+
     /**************
      * Start RTOS * 
      **************/
@@ -149,12 +163,6 @@ static void _SYS_Tasks ( void)
         SYS_DEVCON_Tasks(sysObj.sysDevcon);
 
         /* Maintain Device Drivers */
-    DRV_USART_TasksTransmit(sysObj.drvUsart0);
-    DRV_USART_TasksError (sysObj.drvUsart0);
-    DRV_USART_TasksReceive(sysObj.drvUsart0);
-    DRV_USART_TasksTransmit(sysObj.drvUsart1);
-    DRV_USART_TasksError (sysObj.drvUsart1);
-    DRV_USART_TasksReceive(sysObj.drvUsart1);
  
  
 
@@ -253,6 +261,42 @@ static void _ATT_CONTROLLER_TASK_Tasks(void)
     while(1)
     {
         ATT_CONTROLLER_TASK_Tasks();
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+}
+
+
+/*******************************************************************************
+  Function:
+    void _SERIALHANDLER_Tasks ( void )
+
+  Summary:
+    Maintains state machine of SERIALHANDLER.
+*/
+
+static void _SERIALHANDLER_Tasks(void)
+{
+    while(1)
+    {
+        SERIALHANDLER_Tasks();
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
+
+
+/*******************************************************************************
+  Function:
+    void _IMU_UPDATE_TASK_Tasks ( void )
+
+  Summary:
+    Maintains state machine of IMU_UPDATE_TASK.
+*/
+
+static void _IMU_UPDATE_TASK_Tasks(void)
+{
+    while(1)
+    {
+        IMU_UPDATE_TASK_Tasks();
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }

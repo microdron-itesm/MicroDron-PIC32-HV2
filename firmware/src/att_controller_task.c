@@ -54,6 +54,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 
 #include "att_controller_task.h"
+#include "Tasks/AttitudeControllerTask/AttitudeControllerTask.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -143,7 +144,8 @@ void ATT_CONTROLLER_TASK_Tasks ( void )
         {
             bool appInitialized = true;
        
-        
+            AttitudeController_Init(NULL);
+            
             if (appInitialized)
             {
             
@@ -154,7 +156,7 @@ void ATT_CONTROLLER_TASK_Tasks ( void )
 
         case ATT_CONTROLLER_TASK_STATE_SERVICE_TASKS:
         {
-        
+            AttitudeController_Update(NULL);
             break;
         }
 

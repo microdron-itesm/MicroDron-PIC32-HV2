@@ -3,24 +3,45 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/main.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/serialhandler.c</file>
             <file>file:/home/abiel/microchip/harmony/v2_06/framework/peripheral/usart/templates/usart_ReceiverDataAvailable_Default.h</file>
             <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/MAVLink/MAVLinkSender.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/IMUUpdateTask.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/AttitudeControllerTask/AttitudeControllerTask.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/mavlink_status_task.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/att_controller_task.c</file>
             <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/mavlink_recv_task.c</file>
             <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/usart/src/drv_usart_static_byte_model.c</file>
             <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/libs/MAVLinkV2/mavlink_helpers.h</file>
-            <file>file:/opt/microchip/mplabx/v5.40/packs/Microchip/PIC32MZ-EC_DFP/1.2.40/xc32/startup/crt0.S</file>
-            <file>file:/home/abiel/microchip/harmony/v2_06/third_party/rtos/FreeRTOS/Source/tasks.c</file>
             <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/HAL/PIC_HV2/comms.c</file>
-            <file>file:/home/abiel/microchip/harmony/v2_06/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/port_asm.S</file>
-            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/system_tasks.c</file>
-            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/MAVLink/MAVLinkRecvTask.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/tmr/src/drv_tmr_static.c</file>
             <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/MAVStatusTask.c</file>
-            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/usart/drv_usart_static.h</file>
-            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/rtos_hooks.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/MAVLink/MAVLinkRecvTask.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/MAVLink/MAVLinkSender.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/IMUUpdateTask.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/libs/MAVLinkV2/common/mavlink_msg_heartbeat.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/tmr/drv_tmr_static.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/usart/src/drv_usart_mapping.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/imu_update_task.c</file>
             <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/MAVLink/MAVLinkHandler.c</file>
-            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/HAL/comms.h</file>
-            <file>file:/opt/microchip/xc32/v2.41/pic32mx/include/string.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/main.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/mavlink_send_task.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/libs/Math/Quaternion.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/MAVLink/MAVLinkSendTask.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/framework/driver/oc/src/drv_oc_static.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/system_tasks.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/HAL/PIC_HV2/motors.c</file>
+            <file>file:/home/abiel/microchip/harmony/v2_06/framework/driver/tmr/drv_tmr.h</file>
+            <file>file:/home/abiel/microchip/harmony/v2_06/framework/peripheral/int/templates/int_VectorPriority_Default.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/src/Tasks/MAVStatusTask.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/app.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/HAL/PIC_HV2/imu.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/rtos_hooks.c</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/system_definitions.h</file>
+            <file>file:/opt/microchip/xc32/v2.50/pic32mx/include/string.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/HAL/motors.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/MicroDrone-Firmware/libs/MAVLinkV2/common/mavlink_msg_attitude_quaternion.h</file>
+            <file>file:/home/abiel/Documents/DronTec/MicroDron-PIC32-HV2/firmware/src/system_config/default/general_exception_handler.c</file>
         </group>
     </open-files>
 </project-private>

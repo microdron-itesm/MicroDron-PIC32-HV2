@@ -48,8 +48,8 @@
 #define configUSE_TICKLESS_IDLE                 0
 #define configCPU_CLOCK_HZ                      ( 200000000UL )
 #define configPERIPHERAL_CLOCK_HZ               ( 100000000UL )
-#define configTICK_RATE_HZ                      ( ( TickType_t ) 250 )
-#define configMAX_PRIORITIES                    ( 8UL )
+#define configTICK_RATE_HZ                      ( ( TickType_t ) 500 )
+#define configMAX_PRIORITIES                    ( 15UL )
 #define configMINIMAL_STACK_SIZE                ( 128 )
 #define configISR_STACK_SIZE                    ( 400 )
 #define configSUPPORT_DYNAMIC_ALLOCATION        1
@@ -61,9 +61,9 @@
 #define configUSE_MUTEXES                       1
 #define configUSE_RECURSIVE_MUTEXES             1
 #define configUSE_COUNTING_SEMAPHORES           1
-#define configUSE_TASK_NOTIFICATIONS            0
+#define configUSE_TASK_NOTIFICATIONS            1
 #define configQUEUE_REGISTRY_SIZE               0
-#define configUSE_QUEUE_SETS                    0
+#define configUSE_QUEUE_SETS                    1
 #define configUSE_TIME_SLICING                  0
 #define configUSE_NEWLIB_REENTRANT              0
 #define configENABLE_BACKWARD_COMPATIBILITY     0
@@ -94,6 +94,11 @@
 /* Misc */
 #define configUSE_APPLICATION_TASK_TAG          0
 
+/* Prevent C specific syntax being included in assembly files. */
+#ifndef __LANGUAGE_ASSEMBLY
+    void vAssertCalled( const char *pcFileName, unsigned long ulLine );
+    #define configASSERT( x ) if( ( x ) == 0 ) vAssertCalled( __FILE__, __LINE__ )
+#endif
 
 /* Interrupt nesting behaviour configuration. */
 

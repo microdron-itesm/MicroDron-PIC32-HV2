@@ -59,12 +59,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system/ports/sys_ports.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "math/dsp/dsp.h"
 #include "app.h"
 #include "mavlink_recv_task.h"
 #include "mavlink_send_task.h"
 #include "mavlink_status_task.h"
 #include "att_controller_task.h"
+#include "serialhandler.h"
+#include "imu_update_task.h"
 
 
 // DOM-IGNORE-BEGIN
@@ -100,6 +101,7 @@ typedef struct
 {
     SYS_MODULE_OBJ  sysDevcon;
     SYS_MODULE_OBJ  drvTmr0;
+    SYS_MODULE_OBJ  drvTmr1;
 
     SYS_MODULE_OBJ  drvUsart0;
     SYS_MODULE_OBJ  drvUsart1;
