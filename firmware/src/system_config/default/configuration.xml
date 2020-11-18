@@ -332,7 +332,7 @@
       <Template dnOrder="10">
         <Name dnOrder="0">FreeRTOSConfig.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">51AE674444E570C17DC9BAF33934E03C</Checksum>
+        <Checksum dnOrder="2">D85039E4D97FB18967C8D059035D7F8E</Checksum>
       </Template>
       <Template dnOrder="11">
         <Name dnOrder="0">mavlink_send_task.c</Name>
