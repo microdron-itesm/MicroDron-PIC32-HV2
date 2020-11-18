@@ -60,42 +60,42 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVOCES, OR ANY CLAIMS BY THIRD PARTIES
 void DRV_OC0_Initialize(void)
 {
     /* Setup OC0 Instance */
-    PLIB_OC_ModeSelect(OC_ID_1, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
-    PLIB_OC_BufferSizeSelect(OC_ID_1, OC_BUFFER_SIZE_16BIT);
-    PLIB_OC_TimerSelect(OC_ID_1, OC_TIMER_16BIT_TMR2);
-    PLIB_OC_Buffer16BitSet(OC_ID_1, 0);
-    PLIB_OC_PulseWidth16BitSet(OC_ID_1, 625);
+    PLIB_OC_ModeSelect(OC_ID_2, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
+    PLIB_OC_BufferSizeSelect(OC_ID_2, OC_BUFFER_SIZE_16BIT);
+    PLIB_OC_TimerSelect(OC_ID_2, OC_TIMER_16BIT_TMR2);
+    PLIB_OC_Buffer16BitSet(OC_ID_2, 0);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_2, 2500);
 }
 
 void DRV_OC0_Enable(void)
 {
-   PLIB_OC_Enable(OC_ID_1);
+   PLIB_OC_Enable(OC_ID_2);
 }
 
 void DRV_OC0_Disable(void)
 {
-   PLIB_OC_Disable(OC_ID_1);
+   PLIB_OC_Disable(OC_ID_2);
 }
 
 void DRV_OC0_Start(void)
 {
-   PLIB_OC_Enable(OC_ID_1);
+   PLIB_OC_Enable(OC_ID_2);
 }
 
 void DRV_OC0_Stop(void)
 {
-   PLIB_OC_Disable(OC_ID_1);
+   PLIB_OC_Disable(OC_ID_2);
 }
 
 void DRV_OC0_PulseWidthSet(uint32_t pulseWidth)
 {
     /* Updating pulse width for 16 bit mode */
-    PLIB_OC_PulseWidth16BitSet(OC_ID_1, (uint16_t)pulseWidth);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_2, (uint16_t)pulseWidth);
 }
 
 bool DRV_OC0_FaultHasOccurred(void)
 {
-   return PLIB_OC_FaultHasOccurred(OC_ID_1);
+   return PLIB_OC_FaultHasOccurred(OC_ID_2);
 }
 
 // *****************************************************************************
@@ -106,42 +106,42 @@ bool DRV_OC0_FaultHasOccurred(void)
 void DRV_OC1_Initialize(void)
 {
     /* Setup OC0 Instance */
-    PLIB_OC_ModeSelect(OC_ID_2, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
-    PLIB_OC_BufferSizeSelect(OC_ID_2, OC_BUFFER_SIZE_16BIT);
-    PLIB_OC_TimerSelect(OC_ID_2, OC_TIMER_16BIT_TMR2);
-    PLIB_OC_Buffer16BitSet(OC_ID_2, 0);
-    PLIB_OC_PulseWidth16BitSet(OC_ID_2, 625);
+    PLIB_OC_ModeSelect(OC_ID_1, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
+    PLIB_OC_BufferSizeSelect(OC_ID_1, OC_BUFFER_SIZE_16BIT);
+    PLIB_OC_TimerSelect(OC_ID_1, OC_TIMER_16BIT_TMR2);
+    PLIB_OC_Buffer16BitSet(OC_ID_1, 0);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_1, 2500);
 }
 
 void DRV_OC1_Enable(void)
 {
-   PLIB_OC_Enable(OC_ID_2);
+   PLIB_OC_Enable(OC_ID_1);
 }
 
 void DRV_OC1_Disable(void)
 {
-   PLIB_OC_Disable(OC_ID_2);
+   PLIB_OC_Disable(OC_ID_1);
 }
 
 void DRV_OC1_Start(void)
 {
-   PLIB_OC_Enable(OC_ID_2);
+   PLIB_OC_Enable(OC_ID_1);
 }
 
 void DRV_OC1_Stop(void)
 {
-   PLIB_OC_Disable(OC_ID_2);
+   PLIB_OC_Disable(OC_ID_1);
 }
 
 void DRV_OC1_PulseWidthSet(uint32_t pulseWidth)
 {
     /* Updating pulse width for 16 bit mode */
-    PLIB_OC_PulseWidth16BitSet(OC_ID_2, (uint16_t)pulseWidth);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_1, (uint16_t)pulseWidth);
 }
 
 bool DRV_OC1_FaultHasOccurred(void)
 {
-   return PLIB_OC_FaultHasOccurred(OC_ID_2);
+   return PLIB_OC_FaultHasOccurred(OC_ID_1);
 }
 
 // *****************************************************************************
@@ -152,42 +152,42 @@ bool DRV_OC1_FaultHasOccurred(void)
 void DRV_OC2_Initialize(void)
 {
     /* Setup OC0 Instance */
-    PLIB_OC_ModeSelect(OC_ID_3, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
-    PLIB_OC_BufferSizeSelect(OC_ID_3, OC_BUFFER_SIZE_16BIT);
-    PLIB_OC_TimerSelect(OC_ID_3, OC_TIMER_16BIT_TMR2);
-    PLIB_OC_Buffer16BitSet(OC_ID_3, 0);
-    PLIB_OC_PulseWidth16BitSet(OC_ID_3, 625);
+    PLIB_OC_ModeSelect(OC_ID_9, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
+    PLIB_OC_BufferSizeSelect(OC_ID_9, OC_BUFFER_SIZE_16BIT);
+    PLIB_OC_TimerSelect(OC_ID_9, OC_TIMER_16BIT_TMR2);
+    PLIB_OC_Buffer16BitSet(OC_ID_9, 0);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_9, 2500);
 }
 
 void DRV_OC2_Enable(void)
 {
-   PLIB_OC_Enable(OC_ID_3);
+   PLIB_OC_Enable(OC_ID_9);
 }
 
 void DRV_OC2_Disable(void)
 {
-   PLIB_OC_Disable(OC_ID_3);
+   PLIB_OC_Disable(OC_ID_9);
 }
 
 void DRV_OC2_Start(void)
 {
-   PLIB_OC_Enable(OC_ID_3);
+   PLIB_OC_Enable(OC_ID_9);
 }
 
 void DRV_OC2_Stop(void)
 {
-   PLIB_OC_Disable(OC_ID_3);
+   PLIB_OC_Disable(OC_ID_9);
 }
 
 void DRV_OC2_PulseWidthSet(uint32_t pulseWidth)
 {
     /* Updating pulse width for 16 bit mode */
-    PLIB_OC_PulseWidth16BitSet(OC_ID_3, (uint16_t)pulseWidth);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_9, (uint16_t)pulseWidth);
 }
 
 bool DRV_OC2_FaultHasOccurred(void)
 {
-   return PLIB_OC_FaultHasOccurred(OC_ID_3);
+   return PLIB_OC_FaultHasOccurred(OC_ID_9);
 }
 
 // *****************************************************************************
@@ -198,42 +198,42 @@ bool DRV_OC2_FaultHasOccurred(void)
 void DRV_OC3_Initialize(void)
 {
     /* Setup OC0 Instance */
-    PLIB_OC_ModeSelect(OC_ID_9, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
-    PLIB_OC_BufferSizeSelect(OC_ID_9, OC_BUFFER_SIZE_16BIT);
-    PLIB_OC_TimerSelect(OC_ID_9, OC_TIMER_16BIT_TMR2);
-    PLIB_OC_Buffer16BitSet(OC_ID_9, 0);
-    PLIB_OC_PulseWidth16BitSet(OC_ID_9, 625);
+    PLIB_OC_ModeSelect(OC_ID_3, OC_COMPARE_PWM_EDGE_ALIGNED_MODE);
+    PLIB_OC_BufferSizeSelect(OC_ID_3, OC_BUFFER_SIZE_16BIT);
+    PLIB_OC_TimerSelect(OC_ID_3, OC_TIMER_16BIT_TMR2);
+    PLIB_OC_Buffer16BitSet(OC_ID_3, 0);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_3, 2500);
 }
 
 void DRV_OC3_Enable(void)
 {
-   PLIB_OC_Enable(OC_ID_9);
+   PLIB_OC_Enable(OC_ID_3);
 }
 
 void DRV_OC3_Disable(void)
 {
-   PLIB_OC_Disable(OC_ID_9);
+   PLIB_OC_Disable(OC_ID_3);
 }
 
 void DRV_OC3_Start(void)
 {
-   PLIB_OC_Enable(OC_ID_9);
+   PLIB_OC_Enable(OC_ID_3);
 }
 
 void DRV_OC3_Stop(void)
 {
-   PLIB_OC_Disable(OC_ID_9);
+   PLIB_OC_Disable(OC_ID_3);
 }
 
 void DRV_OC3_PulseWidthSet(uint32_t pulseWidth)
 {
     /* Updating pulse width for 16 bit mode */
-    PLIB_OC_PulseWidth16BitSet(OC_ID_9, (uint16_t)pulseWidth);
+    PLIB_OC_PulseWidth16BitSet(OC_ID_3, (uint16_t)pulseWidth);
 }
 
 bool DRV_OC3_FaultHasOccurred(void)
 {
-   return PLIB_OC_FaultHasOccurred(OC_ID_9);
+   return PLIB_OC_FaultHasOccurred(OC_ID_3);
 }
 
 /*******************************************************************************

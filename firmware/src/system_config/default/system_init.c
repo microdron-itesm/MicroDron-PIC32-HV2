@@ -78,7 +78,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #pragma config IESO =       OFF
 #pragma config POSCMOD =    OFF
 #pragma config OSCIOFNC =   OFF
-#pragma config FCKSM =      CSECME
+#pragma config FCKSM =      CSDCMD
 #pragma config WDTPS =      PS1048576
 #pragma config WDTSPGM =    STOP
 #pragma config FWDTEN =     OFF
@@ -100,14 +100,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #pragma config USERID =     0xffff
 #pragma config FMIIEN =     OFF
 #pragma config FETHIO =     OFF
-#pragma config PGL1WAY =    ON
-#pragma config PMDL1WAY =   ON
+#pragma config PGL1WAY =    OFF
+#pragma config PMDL1WAY =   OFF
 #pragma config IOL1WAY =    OFF
 #pragma config FUSBIDIO =   OFF
 
 /*** BF1SEQ0 ***/
 
-#pragma config TSEQ =       0x0000
+#pragma config TSEQ =       0xffff
 #pragma config CSEQ =       0xffff
 // </editor-fold>
 

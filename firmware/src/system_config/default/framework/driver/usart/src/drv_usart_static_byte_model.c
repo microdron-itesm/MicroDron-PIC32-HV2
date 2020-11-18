@@ -68,8 +68,6 @@ extern DRV_USART_OBJ  gDrvUSART0Obj ;
 
 uint8_t DRV_USART0_ReadByte(void)
 {
-    return PLIB_USART_ReceiverByteReceive(USART_ID_1);
-    
     uint8_t readValue;
 	
     /* This function needs to be thread safe */
@@ -162,8 +160,6 @@ extern DRV_USART_OBJ  gDrvUSART1Obj ;
 
 uint8_t DRV_USART1_ReadByte(void)
 {
-    return PLIB_USART_ReceiverByteReceive(USART_ID_3);
-
     uint8_t readValue;
 	
     /* This function needs to be thread safe */

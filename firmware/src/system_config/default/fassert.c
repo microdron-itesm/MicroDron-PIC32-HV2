@@ -31,7 +31,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 #include "system_config.h"
 #include "system_definitions.h"
-#include "system/debug/sys_debug.h"
 
 
 // Replacement for built-in _fassert
@@ -42,6 +41,6 @@ void __attribute__((noreturn)) _fassert(int          nLineNumber,
 {
 
     while(1) {
-        SYS_DEBUG_BreakPoint();
+      /* TODO:  Insert exception handling code. */
     }
 }

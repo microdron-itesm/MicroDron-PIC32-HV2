@@ -279,7 +279,7 @@ static void _SERIALHANDLER_Tasks(void)
     while(1)
     {
         SERIALHANDLER_Tasks();
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
     }
 }
 

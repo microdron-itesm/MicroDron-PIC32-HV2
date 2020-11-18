@@ -57,6 +57,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "driver/usart/drv_usart.h"
 #include "driver/usart/drv_usart_definitions.h"
 #include "driver/driver_common.h"
+#include <FreeRTOS.h>
+#include <queue.h>
 
 // *****************************************************************************
 // *****************************************************************************
@@ -103,6 +105,7 @@ int i;
 static DRV_HANDLE espHandle, imuHandle;
 extern QueueHandle_t g_espSerialByteQueue;
 extern QueueHandle_t g_imuSerialByteQueue;
+static volatile TickType_t lastRecv;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -145,6 +148,8 @@ void uartCallback(const SYS_MODULE_INDEX index){
             xQueueSendToBackFromISR(g_imuSerialByteQueue, &byte, 0);
             break;
     }
+    
+    lastRecv = xTaskGetTickCountFromISR();
 }
 
 /*******************************************************************************
@@ -193,6 +198,9 @@ void SERIALHANDLER_Tasks ( void )
             
             DRV_USART0_ByteReceiveCallbackSet(uartCallback);
             DRV_USART1_ByteReceiveCallbackSet(uartCallback);
+            
+            ESP_INTToggle();
+            IMU_INTToggle();
 
             //while(!DRV_TMR1_AlarmRegister(4000, true, NULL, timerCallback));
             //DRV_TMR1_AlarmEnable(true);
@@ -208,8 +216,11 @@ void SERIALHANDLER_Tasks ( void )
 
         case SERIALHANDLER_STATE_SERVICE_TASKS:
         {
-            ESP_INTToggle();
-            IMU_INTToggle();
+            if(xTaskGetTickCount() - lastRecv > pdMS_TO_TICKS(10)){
+                ESP_INTToggle();
+                IMU_INTToggle();
+            }
+            
             break;
         }
 

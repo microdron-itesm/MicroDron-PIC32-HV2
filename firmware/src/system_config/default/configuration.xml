@@ -290,7 +290,7 @@
       <Template dnOrder="1">
         <Name dnOrder="0">sys_ports_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/ports/src</Path>
-        <Checksum dnOrder="2">5DF6DCE98B591A936C629A19902A12E3</Checksum>
+        <Checksum dnOrder="2">599158EB4D444EFAEA092687912A6270</Checksum>
       </Template>
       <Template dnOrder="2">
         <Name dnOrder="0">att_controller_task.h</Name>
@@ -299,7 +299,7 @@
       <Template dnOrder="3">
         <Name dnOrder="0">system_interrupt_a.S</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">2EC69882E60E7B6A3379BB95FA1A0BBF</Checksum>
+        <Checksum dnOrder="2">687461C48F9020B0FAD19FF0DBA0FF0B</Checksum>
       </Template>
       <Template dnOrder="4">
         <Name dnOrder="0">serialhandler.h</Name>
@@ -308,7 +308,7 @@
       <Template dnOrder="5">
         <Name dnOrder="0">drv_tmr_static.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/tmr</Path>
-        <Checksum dnOrder="2">F82D221998445D8F9F5CAB55814AA526</Checksum>
+        <Checksum dnOrder="2">05B5785724E85C2FF64449B6B228D2EB</Checksum>
       </Template>
       <Template dnOrder="6">
         <Name dnOrder="0">drv_tmr_mapping.c</Name>
@@ -320,145 +320,135 @@
         <Path dnOrder="1">Header&amp;#160;Files/app</Path>
       </Template>
       <Template dnOrder="8">
-        <Name dnOrder="0">general-exception-context.S</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">C73FC716A50DDB05718577E8BBE06959</Checksum>
-      </Template>
-      <Template dnOrder="9">
         <Name dnOrder="0">drv_usart_mapping.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
         <Checksum dnOrder="2">9947B63A7DB8BFF9BC7CAD380CFDBC02</Checksum>
       </Template>
-      <Template dnOrder="10">
+      <Template dnOrder="9">
         <Name dnOrder="0">FreeRTOSConfig.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
         <Checksum dnOrder="2">1B7D1C93457B14470F0527C35E5F7EB6</Checksum>
       </Template>
-      <Template dnOrder="11">
+      <Template dnOrder="10">
         <Name dnOrder="0">mavlink_send_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="12">
+      <Template dnOrder="11">
         <Name dnOrder="0">imu_update_task.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="13">
+      <Template dnOrder="12">
         <Name dnOrder="0">drv_usart_static_byte_model.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
         <Checksum dnOrder="2">B2D3B92D555F9DDEDF3DC02D6863F6B4</Checksum>
       </Template>
-      <Template dnOrder="14">
+      <Template dnOrder="13">
         <Name dnOrder="0">system_interrupt.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">A32C098C7D277025706D1D56F68C69A4</Checksum>
+        <Checksum dnOrder="2">3627AFDFA9621DA1B03F9D5B0D97C182</Checksum>
       </Template>
-      <Template dnOrder="15">
+      <Template dnOrder="14">
         <Name dnOrder="0">mavlink_status_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="16">
+      <Template dnOrder="15">
         <Name dnOrder="0">drv_oc_mapping.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/oc/src</Path>
         <Checksum dnOrder="2">444E2D2D0F6A5072EC1B472B91E4C1E7</Checksum>
       </Template>
-      <Template dnOrder="17">
+      <Template dnOrder="16">
         <Name dnOrder="0">drv_oc_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/oc/src</Path>
-        <Checksum dnOrder="2">6A1BB92F5B9E3817417797FD32AE9320</Checksum>
+        <Checksum dnOrder="2">7B3A24199E240F34B4FC030873CF18C7</Checksum>
       </Template>
-      <Template dnOrder="18">
+      <Template dnOrder="17">
         <Name dnOrder="0">drv_usart_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
         <Checksum dnOrder="2">020EA8905F459F3D0AE0AA6540EED7D7</Checksum>
       </Template>
-      <Template dnOrder="19">
+      <Template dnOrder="18">
         <Name dnOrder="0">system_init.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">6D0EB9E0A3D8D7560E7FB0ED6D55173F</Checksum>
+        <Checksum dnOrder="2">A0704C80112AAB79C45027B4FFC9AFAD</Checksum>
       </Template>
-      <Template dnOrder="20">
+      <Template dnOrder="19">
         <Name dnOrder="0">drv_oc_static.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/oc</Path>
         <Checksum dnOrder="2">7FA79599AB4BB6A7AEB0EA6137402E66</Checksum>
       </Template>
-      <Template dnOrder="21">
+      <Template dnOrder="20">
         <Name dnOrder="0">main.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="22">
+      <Template dnOrder="21">
         <Name dnOrder="0">system_definitions.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
         <Checksum dnOrder="2">75F8609BEDDCE584001A1E8D35427A67</Checksum>
       </Template>
-      <Template dnOrder="23">
+      <Template dnOrder="22">
         <Name dnOrder="0">mavlink_send_task.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="24">
+      <Template dnOrder="23">
         <Name dnOrder="0">fassert.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">EEFFDA5F0EF8BC411198C1F6CA901E9E</Checksum>
+        <Checksum dnOrder="2">5F4D210EDFDA155FEDEDA065B6B5E34D</Checksum>
       </Template>
-      <Template dnOrder="25">
+      <Template dnOrder="24">
         <Name dnOrder="0">app.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="26">
+      <Template dnOrder="25">
         <Name dnOrder="0">imu_update_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="27">
+      <Template dnOrder="26">
         <Name dnOrder="0">att_controller_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="28">
+      <Template dnOrder="27">
         <Name dnOrder="0">drv_usart_static.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/usart</Path>
         <Checksum dnOrder="2">824F0550562F68E03AB3E2E5247E04FA</Checksum>
       </Template>
-      <Template dnOrder="29">
+      <Template dnOrder="28">
         <Name dnOrder="0">system_tasks.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">7E039F26B6BCE82192F275E73EC3CE12</Checksum>
+        <Checksum dnOrder="2">D6FD513A9897889D92D4BCA4CC2C0DCC</Checksum>
       </Template>
-      <Template dnOrder="30">
+      <Template dnOrder="29">
         <Name dnOrder="0">system_config.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">3A74533DCD72992C8FEABFC47F70236B</Checksum>
+        <Checksum dnOrder="2">8EB29187246B633F50A3F67F7D246C1D</Checksum>
       </Template>
-      <Template dnOrder="31">
+      <Template dnOrder="30">
         <Name dnOrder="0">app.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="32">
+      <Template dnOrder="31">
         <Name dnOrder="0">drv_tmr_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/tmr/src</Path>
-        <Checksum dnOrder="2">B63D58C0E0276486951B1BD8B65136B7</Checksum>
+        <Checksum dnOrder="2">2EB1E31293F6DF54145240AB66A82330</Checksum>
       </Template>
-      <Template dnOrder="33">
+      <Template dnOrder="32">
         <Name dnOrder="0">serialhandler.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="34">
+      <Template dnOrder="33">
         <Name dnOrder="0">rtos_hooks.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
         <Checksum dnOrder="2">1B1A60B954C976ED9682C9D68D82942F</Checksum>
       </Template>
-      <Template dnOrder="35">
+      <Template dnOrder="34">
         <Name dnOrder="0">sys_clk_pic32mz.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/clk/src</Path>
         <Checksum dnOrder="2">CC45A61DC821F2A45FBFD5EB0F76DD59</Checksum>
       </Template>
-      <Template dnOrder="36">
-        <Name dnOrder="0">general_exception_handler.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">A6A1B6867AE703F908A02DE16F980A54</Checksum>
-      </Template>
-      <Template dnOrder="37">
+      <Template dnOrder="35">
         <Name dnOrder="0">mavlink_recv_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="38">
+      <Template dnOrder="36">
         <Name dnOrder="0">drv_usart_static_local.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
         <Checksum dnOrder="2">9C876A422C1066B242348441E6DD4B62</Checksum>

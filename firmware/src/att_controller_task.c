@@ -144,6 +144,7 @@ void ATT_CONTROLLER_TASK_Tasks ( void )
         {
             bool appInitialized = true;
        
+            hal_motors_init();
             AttitudeController_Init(NULL);
             
             if (appInitialized)

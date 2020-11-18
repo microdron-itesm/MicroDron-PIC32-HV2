@@ -122,7 +122,7 @@ void IntHandlerDrvTmrInstance0(void)
 }
 void IntHandlerDrvTmrInstance1(void)
 {
-    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_4);
+    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_5);
     DRV_TMR1_Tasks();
 }
  
