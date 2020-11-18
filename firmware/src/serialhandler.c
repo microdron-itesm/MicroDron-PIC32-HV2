@@ -140,11 +140,13 @@ void uartCallback(const SYS_MODULE_INDEX index){
         case DRV_USART_INDEX_0:
             ESP_INTToggle();
             byte = PLIB_USART_ReceiverByteReceive(USART_ID_1);
+            SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_RECEIVE);
             xQueueSendToBackFromISR(g_espSerialByteQueue, &byte, 0);
             break;
         case DRV_USART_INDEX_1:
             IMU_INTToggle();
             byte = PLIB_USART_ReceiverByteReceive(USART_ID_3);
+            SYS_INT_SourceStatusClear(INT_SOURCE_USART_3_RECEIVE);
             xQueueSendToBackFromISR(g_imuSerialByteQueue, &byte, 0);
             break;
     }

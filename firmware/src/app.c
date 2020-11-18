@@ -54,6 +54,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 
 #include "app.h"
+#include "motors.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -144,7 +145,8 @@ void APP_Tasks ( void )
         {
             bool appInitialized = true;
        
-            ;
+            hal_motors_init();
+            hal_motors_write(NULL);
         
             if (appInitialized)
             {

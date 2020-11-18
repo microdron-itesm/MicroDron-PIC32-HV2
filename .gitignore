@@ -23,3 +23,5 @@ nbproject/Makefile-*
 disassembly/
 *.map
 *.elf
+firmware/MicroDron-PIC32-HV2.X/.generated_files/
+firmware/MicroDron-PIC32-HV2.X/dist/default/*

@@ -386,69 +386,74 @@
         <Checksum dnOrder="2">75F8609BEDDCE584001A1E8D35427A67</Checksum>
       </Template>
       <Template dnOrder="22">
+        <Name dnOrder="0">system_exceptions.c</Name>
+        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
+        <Checksum dnOrder="2">A8BF1AE6018CC1DB37C1C14696195A5F</Checksum>
+      </Template>
+      <Template dnOrder="23">
         <Name dnOrder="0">mavlink_send_task.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="23">
+      <Template dnOrder="24">
         <Name dnOrder="0">fassert.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">5F4D210EDFDA155FEDEDA065B6B5E34D</Checksum>
+        <Checksum dnOrder="2">EEFFDA5F0EF8BC411198C1F6CA901E9E</Checksum>
       </Template>
-      <Template dnOrder="24">
+      <Template dnOrder="25">
         <Name dnOrder="0">app.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="25">
+      <Template dnOrder="26">
         <Name dnOrder="0">imu_update_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="26">
+      <Template dnOrder="27">
         <Name dnOrder="0">att_controller_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="27">
+      <Template dnOrder="28">
         <Name dnOrder="0">drv_usart_static.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/usart</Path>
         <Checksum dnOrder="2">824F0550562F68E03AB3E2E5247E04FA</Checksum>
       </Template>
-      <Template dnOrder="28">
+      <Template dnOrder="29">
         <Name dnOrder="0">system_tasks.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
         <Checksum dnOrder="2">D6FD513A9897889D92D4BCA4CC2C0DCC</Checksum>
       </Template>
-      <Template dnOrder="29">
+      <Template dnOrder="30">
         <Name dnOrder="0">system_config.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
         <Checksum dnOrder="2">8EB29187246B633F50A3F67F7D246C1D</Checksum>
       </Template>
-      <Template dnOrder="30">
+      <Template dnOrder="31">
         <Name dnOrder="0">app.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="31">
+      <Template dnOrder="32">
         <Name dnOrder="0">drv_tmr_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/tmr/src</Path>
         <Checksum dnOrder="2">2EB1E31293F6DF54145240AB66A82330</Checksum>
       </Template>
-      <Template dnOrder="32">
+      <Template dnOrder="33">
         <Name dnOrder="0">serialhandler.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="33">
+      <Template dnOrder="34">
         <Name dnOrder="0">rtos_hooks.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
         <Checksum dnOrder="2">1B1A60B954C976ED9682C9D68D82942F</Checksum>
       </Template>
-      <Template dnOrder="34">
+      <Template dnOrder="35">
         <Name dnOrder="0">sys_clk_pic32mz.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/clk/src</Path>
         <Checksum dnOrder="2">CC45A61DC821F2A45FBFD5EB0F76DD59</Checksum>
       </Template>
-      <Template dnOrder="35">
+      <Template dnOrder="36">
         <Name dnOrder="0">mavlink_recv_task.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="36">
+      <Template dnOrder="37">
         <Name dnOrder="0">drv_usart_static_local.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/usart/src</Path>
         <Checksum dnOrder="2">9C876A422C1066B242348441E6DD4B62</Checksum>
