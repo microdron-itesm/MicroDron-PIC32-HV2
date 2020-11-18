@@ -634,7 +634,8 @@
             </logicalFolder>
             <itemPath>../src/system_config/default/system_init.c</itemPath>
             <itemPath>../src/system_config/default/system_interrupt.c</itemPath>
-            <itemPath>../src/system_config/default/system_exceptions.c</itemPath>
+            <itemPath>../src/system_config/default/general_exception_handler.c</itemPath>
+            <itemPath>../src/system_config/default/general-exception-context.S</itemPath>
             <itemPath>../src/system_config/default/fassert.c</itemPath>
             <itemPath>../src/system_config/default/system_tasks.c</itemPath>
             <itemPath>../src/system_config/default/system_interrupt_a.S</itemPath>

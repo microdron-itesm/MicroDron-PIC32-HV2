@@ -163,6 +163,12 @@ static void _SYS_Tasks ( void)
         SYS_DEVCON_Tasks(sysObj.sysDevcon);
 
         /* Maintain Device Drivers */
+    DRV_USART_TasksTransmit(sysObj.drvUsart0);
+    DRV_USART_TasksError (sysObj.drvUsart0);
+    DRV_USART_TasksReceive(sysObj.drvUsart0);
+    DRV_USART_TasksTransmit(sysObj.drvUsart1);
+    DRV_USART_TasksError (sysObj.drvUsart1);
+    DRV_USART_TasksReceive(sysObj.drvUsart1);
  
  
 
@@ -207,7 +213,7 @@ static void _MAVLINK_RECV_TASK_Tasks(void)
     while(1)
     {
         MAVLINK_RECV_TASK_Tasks();
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(20 / portTICK_PERIOD_MS);
     }
 }
 
@@ -225,7 +231,7 @@ static void _MAVLINK_SEND_TASK_Tasks(void)
     while(1)
     {
         MAVLINK_SEND_TASK_Tasks();
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(20 / portTICK_PERIOD_MS);
     }
 }
 
@@ -279,7 +285,7 @@ static void _SERIALHANDLER_Tasks(void)
     while(1)
     {
         SERIALHANDLER_Tasks();
-        vTaskDelay(500 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 

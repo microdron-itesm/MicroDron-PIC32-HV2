@@ -114,11 +114,13 @@ static volatile TickType_t lastRecv;
 // *****************************************************************************
 
 static void timerCallback(uintptr_t context, uint32_t alarmCount){
+    uint8_t byte = 0;
     if(g_espSerialByteQueue){
         ESP_INTToggle();
-
         while(!DRV_USART0_ReceiverBufferIsEmpty()){
-            uint8_t byte = DRV_USART0_ReadByte();
+            ESP_INTToggle();
+            byte = PLIB_USART_ReceiverByteReceive(USART_ID_1);
+            SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_RECEIVE);
             xQueueSendToBackFromISR(g_espSerialByteQueue, &byte, 0);
             //DRV_USART0_WriteByte(byte);
         }
@@ -127,27 +129,49 @@ static void timerCallback(uintptr_t context, uint32_t alarmCount){
     if(g_imuSerialByteQueue){
         IMU_INTToggle();
         while(!DRV_USART1_ReceiverBufferIsEmpty()){
-            uint8_t byte = DRV_USART1_ReadByte();
+            IMU_INTToggle();
+            byte = PLIB_USART_ReceiverByteReceive(USART_ID_3);
+            SYS_INT_SourceStatusClear(INT_SOURCE_USART_3_RECEIVE);
             xQueueSendToBackFromISR(g_imuSerialByteQueue, &byte, 0);
         }
     }
+    
+    lastRecv = xTaskGetTickCountFromISR();
 }
 
 void uartCallback(const SYS_MODULE_INDEX index){
     uint8_t byte = 0;
     
-    switch(index){
+//    switch(index){
+//        case DRV_USART_INDEX_0:
+//            ESP_INTToggle();
+//            byte = PLIB_USART_ReceiverByteReceive(USART_ID_1);
+//            SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_RECEIVE);
+//            xQueueSendToBackFromISR(g_espSerialByteQueue, &byte, 0);
+//            break;
+//        case DRV_USART_INDEX_1:
+//            IMU_INTToggle();
+//            byte = PLIB_USART_ReceiverByteReceive(USART_ID_3);
+//            SYS_INT_SourceStatusClear(INT_SOURCE_USART_3_RECEIVE);
+//            xQueueSendToBackFromISR(g_imuSerialByteQueue, &byte, 0);
+//            break;
+//    }
+    
+        switch(index){
         case DRV_USART_INDEX_0:
-            ESP_INTToggle();
-            byte = PLIB_USART_ReceiverByteReceive(USART_ID_1);
-            SYS_INT_SourceStatusClear(INT_SOURCE_USART_1_RECEIVE);
-            xQueueSendToBackFromISR(g_espSerialByteQueue, &byte, 0);
+            while(!DRV_USART0_ReceiverBufferIsEmpty()){
+                ESP_INTToggle();
+                uint8_t byte = DRV_USART0_ReadByte();
+                xQueueSendToBackFromISR(g_espSerialByteQueue, &byte, 0);
+                //DRV_USART0_WriteByte(byte);
+            }
             break;
         case DRV_USART_INDEX_1:
-            IMU_INTToggle();
-            byte = PLIB_USART_ReceiverByteReceive(USART_ID_3);
-            SYS_INT_SourceStatusClear(INT_SOURCE_USART_3_RECEIVE);
-            xQueueSendToBackFromISR(g_imuSerialByteQueue, &byte, 0);
+            while(!DRV_USART1_ReceiverBufferIsEmpty()){
+                IMU_INTToggle();
+                uint8_t byte = DRV_USART1_ReadByte();
+                xQueueSendToBackFromISR(g_imuSerialByteQueue, &byte, 0);
+            }
             break;
     }
     
@@ -198,15 +222,15 @@ void SERIALHANDLER_Tasks ( void )
             espHandle = DRV_USART_Open(DRV_USART_INDEX_0, DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_EXCLUSIVE);
             imuHandle = DRV_USART_Open(DRV_USART_INDEX_1, DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_EXCLUSIVE);
             
-            DRV_USART0_ByteReceiveCallbackSet(uartCallback);
-            DRV_USART1_ByteReceiveCallbackSet(uartCallback);
+            //DRV_USART0_ByteReceiveCallbackSet(uartCallback);
+            //DRV_USART1_ByteReceiveCallbackSet(uartCallback);
             
             ESP_INTToggle();
             IMU_INTToggle();
 
-            //while(!DRV_TMR1_AlarmRegister(4000, true, NULL, timerCallback));
-            //DRV_TMR1_AlarmEnable(true);
-            //DRV_TMR1_Start();
+            while(!DRV_TMR1_AlarmRegister(4000, true, NULL, timerCallback));
+            DRV_TMR1_AlarmEnable(true);
+            DRV_TMR1_Start();
         
             if (appInitialized)
             {

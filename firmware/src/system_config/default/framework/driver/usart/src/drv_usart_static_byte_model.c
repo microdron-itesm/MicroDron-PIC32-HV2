@@ -106,9 +106,10 @@ void DRV_USART0_WriteByte(const uint8_t byte)
         SYS_DEBUG_MESSAGE(SYS_ERROR_DEBUG, "\r\nUSART Driver: Hardware Instance Mutex Time out in DRV_USART_WriteByte() function");
     }
 
+    /* Wait till TX buffer is available as blocking operation is selected */
+    while(PLIB_USART_TransmitterBufferIsFull(USART_ID_1));
     /* Send one byte */
     PLIB_USART_TransmitterByteSend(USART_ID_1, byte);
-    SYS_INT_SourceEnable(INT_SOURCE_USART_1_TRANSMIT);
 
     OSAL_MUTEX_Unlock(&(dObj->mutexDriverInstance));
 }
@@ -133,21 +134,6 @@ bool DRV_USART0_TransmitBufferIsFull(void)
 {
     /* Check the status of transmitter buffer */
     return(PLIB_USART_TransmitterBufferIsFull(USART_ID_1));
-}
-
-void DRV_USART0_ByteTransmitCallbackSet(const DRV_USART_BYTE_EVENT_HANDLER eventHandler)
-{
-        gDrvUSART0Obj.transmitCallback = eventHandler;
-}
-
-void DRV_USART0_ByteReceiveCallbackSet(const DRV_USART_BYTE_EVENT_HANDLER eventHandler)
-{
-        gDrvUSART0Obj.receiveCallback = eventHandler;
-}
-
-void DRV_USART0_ByteErrorCallbackSet(const DRV_USART_BYTE_EVENT_HANDLER eventHandler)
-{
-        gDrvUSART0Obj.errorCallback = eventHandler;
 }
 
 extern DRV_USART_OBJ  gDrvUSART1Obj ;
@@ -198,9 +184,10 @@ void DRV_USART1_WriteByte(const uint8_t byte)
         SYS_DEBUG_MESSAGE(SYS_ERROR_DEBUG, "\r\nUSART Driver: Hardware Instance Mutex Time out in DRV_USART_WriteByte() function");
     }
 
+    /* Wait till TX buffer is available as blocking operation is selected */
+    while(PLIB_USART_TransmitterBufferIsFull(USART_ID_3));
     /* Send one byte */
     PLIB_USART_TransmitterByteSend(USART_ID_3, byte);
-    SYS_INT_SourceEnable(INT_SOURCE_USART_3_TRANSMIT);
 
     OSAL_MUTEX_Unlock(&(dObj->mutexDriverInstance));
 }
@@ -225,21 +212,6 @@ bool DRV_USART1_TransmitBufferIsFull(void)
 {
     /* Check the status of transmitter buffer */
     return(PLIB_USART_TransmitterBufferIsFull(USART_ID_3));
-}
-
-void DRV_USART1_ByteTransmitCallbackSet(const DRV_USART_BYTE_EVENT_HANDLER eventHandler)
-{
-        gDrvUSART1Obj.transmitCallback = eventHandler;
-}
-
-void DRV_USART1_ByteReceiveCallbackSet(const DRV_USART_BYTE_EVENT_HANDLER eventHandler)
-{
-        gDrvUSART1Obj.receiveCallback = eventHandler;
-}
-
-void DRV_USART1_ByteErrorCallbackSet(const DRV_USART_BYTE_EVENT_HANDLER eventHandler)
-{
-        gDrvUSART1Obj.errorCallback = eventHandler;
 }
 
 /*******************************************************************************

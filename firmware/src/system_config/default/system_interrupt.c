@@ -75,45 +75,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
  
-void IntHandlerDrvUsartTransmitInstance0(void)
-{
-    DRV_USART_TasksTransmit(sysObj.drvUsart0);
-}
-void IntHandlerDrvUsartReceiveInstance0(void)
-{
-    DRV_USART_TasksReceive(sysObj.drvUsart0);
-}
-void IntHandlerDrvUsartErrorInstance0(void)
-{
-    DRV_USART_TasksError(sysObj.drvUsart0);
-}
- 
- 
-
- 
-void IntHandlerDrvUsartTransmitInstance1(void)
-{
-    DRV_USART_TasksTransmit(sysObj.drvUsart1);
-}
-void IntHandlerDrvUsartReceiveInstance1(void)
-{
-    DRV_USART_TasksReceive(sysObj.drvUsart1);
-}
-void IntHandlerDrvUsartErrorInstance1(void)
-{
-    DRV_USART_TasksError(sysObj.drvUsart1);
-}
- 
- 
-
- 
-
- 
-
- 
-
- 
- 
  
 
 void IntHandlerDrvTmrInstance0(void)
@@ -122,7 +83,7 @@ void IntHandlerDrvTmrInstance0(void)
 }
 void IntHandlerDrvTmrInstance1(void)
 {
-    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_5);
+    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_4);
     DRV_TMR1_Tasks();
 }
  
