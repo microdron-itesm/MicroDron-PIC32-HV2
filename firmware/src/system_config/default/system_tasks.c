@@ -213,7 +213,7 @@ static void _MAVLINK_RECV_TASK_Tasks(void)
     while(1)
     {
         MAVLINK_RECV_TASK_Tasks();
-        vTaskDelay(20 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }
 
@@ -303,7 +303,7 @@ static void _IMU_UPDATE_TASK_Tasks(void)
     while(1)
     {
         IMU_UPDATE_TASK_Tasks();
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(1 / portTICK_PERIOD_MS);
     }
 }
 
