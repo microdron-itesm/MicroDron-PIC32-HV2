@@ -146,7 +146,7 @@ void ATT_CONTROLLER_TASK_Tasks ( void )
        
             hal_motors_init();
             
-            vTaskDelay(pdMS_TO_TICKS(1000));
+            vTaskDelay(pdMS_TO_TICKS(10000));
             
             //Init setpoint to current pos
             AttitudeController_Init(NULL);
